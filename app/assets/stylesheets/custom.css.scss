@@ -1,5 +1,27 @@
 @import "bootstrap";
 
+/* Overwrite bootstrap css */
+
+.navbar{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.navbar-inner{
+  width: 940px;
+  margin: auto;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.navbar .nav li a:hover{
+  color: #787DB9;
+  text-decoration: underline;
+}
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -16,8 +38,8 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
+body{
+  font-family: Palatino,Georgia, Times, Arial,Helvetica,sans-serif;
 }
 
 section {
@@ -69,7 +91,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: #25AAE1;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -78,18 +100,23 @@ p {
 }
 
 #logo:hover {
-  color: #fff;
+  color: #787DB9;
   text-decoration: none;
 }
 
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 10px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999;
   clear: both;
+}
+
+footer .footer-inner{
+  width: 940px;
+  margin: auto;
 }
 
 footer a {
@@ -186,7 +213,7 @@ input, textarea, select, .uneditable-input {
  }
 
  .item{
-  width: 200px;
+  width: 203px;
   height: 200px;
   border: solid 6px #D7DFE3;
   padding: 10px;
