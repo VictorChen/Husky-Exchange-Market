@@ -22,6 +22,11 @@
   text-decoration: underline;
 }
 
+.navbar .nav li.dropdown .dropdown-toggle .caret, .navbar .nav li.dropdown.open .caret {
+  border-top-color: black;
+  border-bottom-color: black;
+}
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;

@@ -11,7 +11,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:success] = "Welcome to Husky Exchange!"
+      sign_in @user
+      flash[:success] = "Welcome to Husky Exchange Market!"
       redirect_to @user
     else
       render 'new'
