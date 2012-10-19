@@ -9,7 +9,6 @@
           <li><%= link_to "Housing", '#' %></li>
           <li><%= link_to "Employment", '#' %></li>
           <% if signed_in? %>
-            <li><%= link_to "Users", '#' %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <%= current_user.name %> <b class="caret"></b>
