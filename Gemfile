@@ -22,11 +22,11 @@ end
 
 gem 'jquery-rails'
 
-group :production do
+group :production, :development do
   gem 'pg', '0.12.2'
 end
 
-group :development, :test do
+group :test do
   gem 'sqlite3'
 end
 
