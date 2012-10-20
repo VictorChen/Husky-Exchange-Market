@@ -7,7 +7,9 @@ HuskyExchange::Application.routes.draw do
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-  match '/sales',    to: 'static_pages#sales'
+  match '/sales',   to: 'static_pages#sales'
+  match '/housing', to: 'static_pages#housing'
+  match '/employment', to: 'static_pages#employment'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
 

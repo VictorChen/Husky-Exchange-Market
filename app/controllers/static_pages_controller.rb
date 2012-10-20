@@ -5,6 +5,12 @@ class StaticPagesController < ApplicationController
   def sales
   end
 
+  def housing
+  end
+
+  def employment
+  end
+
   def contact
   end
 end
