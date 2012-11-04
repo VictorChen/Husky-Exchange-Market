@@ -11,6 +11,15 @@ class StaticPagesController < ApplicationController
   def employment
   end
 
+  def services
+  end
+
+  def events
+  end
+
+  def community
+  end
+
   def contact
   end
 end

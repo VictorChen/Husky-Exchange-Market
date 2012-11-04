@@ -4,10 +4,6 @@
       <%= link_to "Husky Exchange Market", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Sales", sales_path %></li>
-          <li><%= link_to "Housing", housing_path %></li>
-          <li><%= link_to "Employment", employment_path %></li>
           <% if signed_in? %>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -24,6 +20,7 @@
             </li>
           <% else %>
             <li><%= link_to "Sign in", signin_path %></li>
+            <li style="position: relative; top: 10px;"><i class="icon-user"></i></li>
           <% end %>
         </ul>
       </nav>

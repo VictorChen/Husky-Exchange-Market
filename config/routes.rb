@@ -10,6 +10,9 @@ HuskyExchange::Application.routes.draw do
   match '/sales',   to: 'static_pages#sales'
   match '/housing', to: 'static_pages#housing'
   match '/employment', to: 'static_pages#employment'
+  match '/services', to: 'static_pages#services'
+  match '/events', to: 'static_pages#events'
+  match '/community', to: 'static_pages#community'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
 
