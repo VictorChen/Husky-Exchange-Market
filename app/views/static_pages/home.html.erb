@@ -1,57 +1,35 @@
-<div class="categories">
-  <ul class="nav nav-pills">
-    <li class="active"><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Sales", sales_path %></li>
-    <li><%= link_to "Housing", housing_path %></li>
-    <li><%= link_to "Employment", employment_path %></li>
-    <li><%= link_to "Services", services_path %></li>
-    <li><%= link_to "Events", events_path %></li>
-    <li><%= link_to "Community", community_path %></li>
-  </ul>
-</div>
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  	<div class="span8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    <h1>Welcome to the Sample App</h1>
 
-<div class="center hero-unit banner">
-  <h1>UConn's Husky Exchange Market!</h1>
+    <h2>
+      This is the home page for the
+      <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+      sample application.
+    </h2>
 
-  <h2>
-    Purchase/sell your items today!
-  </h2>
+    <%= link_to "Sign up now!", signup_path, 
+                                class: "btn btn-large btn-primary" %>
+  </div>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-</div>
-
-<h3>Recently Posted Items:</h3>
-<div class="items-stack">
-	<div class="item">
-		<a href="">iPod Touch</a>
-		<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-	</div>
-	<div class="item">
-		<a href="">iPod Touch</a>
-		<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-	</div>
-	<div class="item">
-		<a href="">iPod Touch</a>
-		<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-	</div>
-	<div class="item">
-		<a href="">iPod Touch</a>
-		<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-	</div>
-	<div class="item">
-		<a href="">iPod Touch</a>
-		<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-	</div>
-	<div class="item">
-		<a href="">iPod Touch</a>
-		<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-	</div>
-	<div class="item">
-		<a href="">iPod Touch</a>
-		<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-	</div>
-	<div class="item">
-		<a href="">iPod Touch</a>
-		<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-	</div>
-</div>
+  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+<% end %> 
