@@ -11,6 +11,6 @@
   </aside>
 </div>
   <% if @user.products.any? %>
-    <h3>My Products (<%= @user.products.count %>):</h3>
+    <h3><%= @user.name %>'s Products (<%= @user.products.count %>):</h3>
       <%= render @products %>
   <% end %>
