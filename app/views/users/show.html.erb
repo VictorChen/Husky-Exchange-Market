@@ -10,7 +10,10 @@
     </section>
   </aside>
 </div>
-  <% if @user.products.any? %>
-    <h3><%= @user.name %>'s Products (<%= @user.products.count %>):</h3>
-      <%= render @products %>
-  <% end %>
+<%= will_paginate @products %>
+<% if @user.products.any? %>
+  <h3><%= @user.name %>'s Products (<%= @user.products.count %>):</h3>
+    <%= render @products %>
+<% end %>
+<div style="clear: both;"></div>
+<%= will_paginate @products %>

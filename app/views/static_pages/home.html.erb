@@ -31,48 +31,12 @@
         <%= render 'shared/product_form' %>
       </section>
     </aside>
+    <%= will_paginate @feed_items %>
 	<h3>Recently Posted Items:</h3>
 	<%= render 'shared/feed' %>
+	<%= will_paginate @feed_items %>
   </div>
 <% else %>
-	<!--
-	<h3>Recently Posted Items:</h3>
-	<div class="items-stack">
-		<div class="item">
-			<a href="">iPod Touch</a>
-			<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-		</div>
-		<div class="item">
-			<a href="">iPod Touch</a>
-			<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-		</div>
-		<div class="item">
-			<a href="">iPod Touch</a>
-			<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-		</div>
-		<div class="item">
-			<a href="">iPod Touch</a>
-			<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-		</div>
-		<div class="item">
-			<a href="">iPod Touch</a>
-			<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-		</div>
-		<div class="item">
-			<a href="">iPod Touch</a>
-			<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-		</div>
-		<div class="item">
-			<a href="">iPod Touch</a>
-			<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-		</div>
-		<div class="item">
-			<a href="">iPod Touch</a>
-			<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
-		</div>
-	</div>
--->
-
 	<h3>Recently Posted Items:</h3>
 	<%= render 'shared/feed' %>
 <% end %> 
