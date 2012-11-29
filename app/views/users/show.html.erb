@@ -6,19 +6,15 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-    </section>
-    <section>
-      <%= render 'shared/stats' %>
+      <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
     </section>
   </aside>
   <div class="span8">
-  	<%= render 'follow_form' if signed_in? %>
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
+    <% if @user.products.any? %>
+      <h3>Products (<%= @user.products.count %>)</h3>
+      <ol class="products">
+        <%= render @products %>
       </ol>
-      <%= will_paginate @microposts %>
     <% end %>
   </div>
 </div>

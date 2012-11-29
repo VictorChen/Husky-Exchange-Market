@@ -1,0 +1,13 @@
+<%= form_for(@product) do |f| %>
+  <div class="field">
+  	<%= f.label :name %>
+    <%= f.text_field :name, :autocomplete => :off %>
+    <%= f.label :category %>
+    <%= f.select :category, [['Electronics','electronics'],['Tickets','tickets'],['Books','books'],['Housing','housing'],['Other','other']] %>
+    <%= f.label :description %>
+    <%= f.text_area :description, placeholder: "Compose new product..." %>
+    <%= f.label :price %>
+    <%= f.text_field :price, :autocomplete => :off %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>
