@@ -15,5 +15,6 @@
   <h3><%= @user.name %>'s Products (<%= @user.products.count %>):</h3>
     <%= render @products %>
 <% end %>
-<div style="clear: both;"></div>
+<div style="float: right; clear: both;">
 <%= will_paginate @products %>
+</div>
