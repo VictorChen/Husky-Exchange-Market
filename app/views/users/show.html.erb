@@ -9,12 +9,8 @@
       <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
     </section>
   </aside>
-  <div class="span8">
-    <% if @user.products.any? %>
-      <h3>Products (<%= @user.products.count %>)</h3>
-      <ol class="products">
-        <%= render @products %>
-      </ol>
-    <% end %>
-  </div>
 </div>
+  <% if @user.products.any? %>
+    <h3>My Products (<%= @user.products.count %>):</h3>
+      <%= render @products %>
+  <% end %>

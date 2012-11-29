@@ -2,7 +2,9 @@ class StaticPagesController < ApplicationController
   def home
     if signed_in?
       @product  = current_user.products.build
-      @feed_items = current_user.feed
+      @feed_items = Product.find(:all, :limit => 8);
+    else
+      @feed_items = Product.find(:all, :limit => 9);
     end
   end
 

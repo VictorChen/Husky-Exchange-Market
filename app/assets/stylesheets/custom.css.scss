@@ -268,11 +268,41 @@ input, textarea, select, .uneditable-input {
  }
 
  .products{
-  list-style: none;
-  margin: 10px 0 0 0;
-
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+  border: 1px solid black;
+  width: 307px;
+  float: left;
+  height: 200px;
+  overflow: hidden;
+  margin: 2px;
+  .user{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 307px;
+    display: inline-block;
+    border-bottom: 1px solid black;
+    background-color: #D7DFE3;
+  }
+  .description{
+    height: 142px;
+    overflow: hidden;
+    padding: 10px;
+  }
+  .info{
+    background-color: #D7DFE3;
+    float: left;
+    width: 307px;
+    border-top: 1px solid black;
+    .price{
+      float: left;
+      color: red;
+    }
+    .timestamp{
+      float: right;
+    }
   }
  }
+
+  .user-product{
+    margin-right: 14px;
+  }

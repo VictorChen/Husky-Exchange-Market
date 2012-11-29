@@ -23,7 +23,7 @@
 
 <% if signed_in? %>
   <div class="row">
-    <aside class="span4">
+    <aside class="span4 user-product">
       <section>
         <%= render 'shared/user_info' %>
       </section>
@@ -31,14 +31,11 @@
         <%= render 'shared/product_form' %>
       </section>
     </aside>
-    <aside class="span3">
-		<div class="span7">
-			<h3>Recently Posted Items:</h3>
-			<%= render 'shared/feed' %>
-		</div>
-    </aside>
+	<h3>Recently Posted Items:</h3>
+	<%= render 'shared/feed' %>
   </div>
 <% else %>
+	<!--
 	<h3>Recently Posted Items:</h3>
 	<div class="items-stack">
 		<div class="item">
@@ -74,4 +71,8 @@
 			<p>Selling a used ipod touch with the headphones. Still in perfect condition!</p>
 		</div>
 	</div>
+-->
+
+	<h3>Recently Posted Items:</h3>
+	<%= render 'shared/feed' %>
 <% end %> 
