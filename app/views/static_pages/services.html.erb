@@ -9,3 +9,10 @@
     <li><%= link_to "Community", community_path %></li>
   </ul>
 </div>
+<%= will_paginate @products %>
+<% if @products.any? %>
+	<%= render partial: 'shared/feed_item', collection: @products %>
+<% end %>
+<div style="float: right; clear: both;">
+<%= will_paginate @products %>
+</div>

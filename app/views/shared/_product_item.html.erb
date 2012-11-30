@@ -1,0 +1,12 @@
+<div class="products well">
+	<span class="user"><span title="<%= products.name %>"><%= link_to products.user.name, products.user %> is selling <%= products.name %></span></span>
+	<div class="description"><%= products.description %></div>
+	<div class="info">
+		<div class="price">
+			$<%= products.price %>
+		</div>
+		<div class="timestamp">
+		Posted <%= time_ago_in_words(products.created_at) %> ago.
+		</div>
+	</div>
+</div>
