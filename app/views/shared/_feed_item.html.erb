@@ -1,5 +1,5 @@
 <div class="products well">
-	<span class="user"><%= link_to feed_item.user.name, feed_item.user %> is selling <%= feed_item.name %></span>
+	<span class="user"><span title=<%= feed_item.name %>><%= link_to feed_item.user.name, feed_item.user %> is selling <%= feed_item.name %></span></span>
 	<div class="description"><%= feed_item.description %></div>
 	<div class="info">
 		<div class="price">
