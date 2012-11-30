@@ -4,12 +4,10 @@ class ProductsController < ApplicationController
 
   def create
     @product = current_user.products.build(params[:product])
-    if @product.save
-      redirect_to root_url
-    else
+    if not @product.save
       @feed_items = []
-      render 'static_pages/home'
     end
+    redirect_to root_url
   end
 
   def destroy
