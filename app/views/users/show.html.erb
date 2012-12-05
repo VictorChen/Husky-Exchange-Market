@@ -18,3 +18,29 @@
 <div style="float: right; clear: both;">
 <%= will_paginate @products %>
 </div>
+
+
+<div>
+<b>SEND AN EMAIL MESSAGE</b> 
+<form method="post" name="mail" action="http://web2.uconn.edu/cgi-bin/formmail.pl"> 
+<input type="hidden" name="recipient" value="nirav.kathrani@uconn.edu"> 
+<input type="hidden" name="required" value="email,subject,message"> 
+
+<!--
+<b>Enter Optional Mail Recipient</b><br>
+<input type="text" name="recipient1" value="" size="64"> 
+-->
+
+<!-- <b>Enter Your Email Address</b><br> -->
+<!-- <input type="text" name="email" value="" size="64"> -->
+
+<input type="hidden" name="email" value="kraig.dandan@uconn.edu" size="64">
+
+<b>Enter Your Subject</b><br> 
+<input type="text" name="subject" value="" size="64"> 
+
+<b>Enter Your Message</b><br> 
+<textarea name="message" cols="64" rows="3"></textarea> <br>
+<input type="submit" value="Submit"> 
+</form> 
+</div>

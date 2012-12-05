@@ -10,8 +10,7 @@
 		</div>
 	</div>
 	<% if current_user?(product.user) %>
-    <%= link_to "delete", product, method: :delete,
-                                     data: { confirm: "You sure?" },
-                                     title: product.name %>
-  <% end %>
+		<%= link_to "edit", edit_product_path(product) %> | 
+		<%= link_to "delete", product, method: :delete, data: { confirm: "You sure?" }, title: product.name %>
+	<% end %>
 </div>

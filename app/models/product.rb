@@ -6,4 +6,10 @@ class Product < ActiveRecord::Base
   validates :category, presence: true
   validates :user_id, presence: true
   default_scope order: 'products.created_at DESC'
+
+  def self.search(search)
+    if params[:search]
+      @products = Product.find(:all)
+    end
+  end
 end

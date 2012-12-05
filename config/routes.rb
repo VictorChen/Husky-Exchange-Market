@@ -1,7 +1,7 @@
 HuskyExchange::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :products, only: [:create, :destroy]
+  resources :products, only: [:create, :destroy, :edit, :update]
 
   root to: 'static_pages#home'
 
@@ -16,6 +16,7 @@ HuskyExchange::Application.routes.draw do
   match '/community', to: 'static_pages#community'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
+  match '/search', to: 'products#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
