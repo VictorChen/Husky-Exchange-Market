@@ -1,17 +1,21 @@
 <% provide(:title, "Edit Item") %>
 <h1>Update your item</h1>
 
-<%= form_for(@product) do |f| %>
-  <div class="field">
-    <%= render 'shared/error_messages', object: f.object %>
-  	<%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :category %>
-    <%= f.select :category, [['Electronics','electronics'],['Tickets','tickets'],['Books','books'],['Housing','housing'],['Furnitures','furnitures'],['Bikes','bikes'],['Tools','tools'],['Games','games'],['Employment','employment'],['Services','services'],['Events','events'],['Community','community'],['Other','other']] %>
-    <%= f.label :description %>
-    <%= f.text_area :description, placeholder: "Compose new product..." %>
-    <%= f.label :price %>
-    <%= f.text_field :price, :autocomplete => :off %>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@product) do |f| %>
+      <div class="field">
+        <%= render 'shared/error_messages', object: f.object %>
+      	<%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :category %>
+        <%= f.select :category, [['Electronics','electronics'],['Tickets','tickets'],['Books','books'],['Housing','housing'],['Furnitures','furnitures'],['Bikes','bikes'],['Tools','tools'],['Games','games'],['Employment','employment'],['Services','services'],['Events','events'],['Community','community'],['Other','other']] %>
+        <%= f.label :description %>
+        <%= f.text_area :description, placeholder: "Compose new product..." %>
+        <%= f.label :price %>
+        <%= f.text_field :price, :autocomplete => :off %>
+      </div>
+      <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+    <% end %>
   </div>
-  <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
-<% end %>
+</div>
