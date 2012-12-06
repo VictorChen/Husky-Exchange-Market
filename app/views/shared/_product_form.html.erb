@@ -1,5 +1,6 @@
 <%= form_for(@product) do |f| %>
   <div class="field">
+    <%= render 'shared/error_messages', object: f.object %>
   	<%= f.label :name %>
     <%= f.text_field :name, :autocomplete => :off %>
     <%= f.label :category %>

@@ -31,7 +31,11 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    if (@product.nil?)
+      @product = Product.find(params[:id])
+    end
     @product.destroy
+    flash[:success] = "Item Successfully Deleted"
     redirect_to current_user
   end
 
@@ -39,6 +43,8 @@ class ProductsController < ApplicationController
 
     def correct_user
       @product = current_user.products.find_by_id(params[:id])
-      redirect_to root_url if @product.nil?
+      if @product.nil? && !current_user.admin?
+        redirect_to root_url 
+      end
     end
 end

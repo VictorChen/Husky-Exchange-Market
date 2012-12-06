@@ -12,5 +12,11 @@
 		Posted <%= time_ago_in_words(product.created_at) %> ago.
 		</div>
 	</div>
+	<% if not current_user.nil? %>
+		<% if current_user?(product.user) || current_user.admin?%>
+			<%= link_to "edit", edit_product_path(product) %> | 
+			<%= link_to "delete", product, method: :delete, data: { confirm: "You sure?" }, title: product.name %>
+		<% end %>
+	<% end %>
 </div>
 <% end %>
