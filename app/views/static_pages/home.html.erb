@@ -38,6 +38,7 @@
 	<%= render 'shared/feed' %>
   </div>
 <% else %>
+  <%= will_paginate @feed_items %>
 	<h3>Recently Posted Items:</h3>
 	<%= render 'shared/feed' %>
   <div style="float: right; clear: both;">
